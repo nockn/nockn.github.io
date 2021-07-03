@@ -35,13 +35,19 @@ body {
   white-space: pre-line;
 }
 
+.header {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+}
+
+
 .footer-text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   position: absolute;
-  bottom: 0%;
-  right: 0%;
-  opacity:0.8;
+  bottom: 2%;
+  right: 1%;
   font-size: 1vmax;
 }
 
