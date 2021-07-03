@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'DotGothic16', sans-serif;
+  color: #fff;
+  min-height: 100%;
+}
+
+
+.title {
+  font-size: 7vmax;
+  left: 50%;
+  line-height: 1.4;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  white-space: pre-line;
+}
+
+.subtitle{
+  font-size: 1.5vmax;
+  left: 50%;
+  line-height: 1.7;
+  position: absolute;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  white-space: pre-line;
+}
+
+.footer-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  opacity:0.8;
+  font-size: 1vmax;
+}
+
+a:link, a:visited, a:hover, a:active{
+  font-weight: bold;
+  color:#fff;
+  text-decoration:none;
+ }
+
+
+.gradient-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+.color1 {
+  background-color: rgba(109, 131, 243,0.3);
+  height: 200vmax;
+  filter: blur(3vmax);
+  left: 45vmax;
+  position: absolute;
+  top: -4vmax;
+  width: 64vmax
+}
+
+.color2 {
+  background-color: rgba(77, 56, 206,0.7);
+  border-radius: 50%;
+  filter: blur(5vmax);
+  height: 38vmax;
+  left: 84vmax;
+  position: absolute;
+  top: -28vmax;
+  width: 38vmax;
+}
+
+.color3 {
+  background-color: rgba(238, 85, 85,0.3);
+  border-radius: 50%;
+  filter: blur(10vmax);
+  left: 45vmax;
+  height: 100vmax;
+  position: absolute;
+  top: 19vmax;
+  width: 67vmax;
+}
+
+.color4 {
+  background-color: rgba(255, 190, 130,0.2);
+  filter: blur(12vmax);
+  height: 100vmax;
+  left: -13vmax;
+  position: absolute;
+  top: 20vmax;
+  width: 83vmax;
+}
+
+.color5 {
+  background-color: rgba(204, 252, 255,0.8);
+  border-radius: 50%;
+  filter: blur(3vmax);
+  height: 83vmax;
+  left: -20vmax;
+  position: absolute;
+  top: -30vmax;
+  width: 83vmax;
+}
+
+.color6 {
+  background-color: rgba(105, 192, 255,1);
+  filter: blur(12vmax);
+  height: 64vmax;
+  left: -16vmax;
+  position: absolute;
+  top: -6vmax;
+  transform: rotate(-8deg);
+  width: 30vmax;
+}
+
+.color7 {
+  background: linear-gradient(to top, rgba(254, 188, 255,0.8) 20%, rgba(254, 202, 255, 0) 100%);
+  top: 8vmax;
+  filter: blur(8vmax);
+  height: 50vmax;
+  left: -12vmax;
+  position: absolute;
+  transform: rotate(-30deg);
+  width: 100vmax;
+}
+
+.color8{
+  height: 100vmax;
+  width: 100vmax;
+  position: absolute;
+
+  animation: color 20s ease infinite;
+
+}
+
+
+@keyframes color {
+  0% {
+    background: rgba(254, 189, 255,0.4);
+  }
+  20% {
+    background: rgba(255, 189, 190,0.4);
+  }
+  40% {
+    background: rgba(255, 254, 189,0.4);
+  }
+  60% {
+    background: rgba(190, 255, 189,0.4) ;
+  }
+  80% {
+    background: rgba(189, 255, 254,0.4) ;
+  }
+  100% {
+    background: rgba(254, 189, 255,0.4) ;
+  }
+}
+
+@keyframes gradopacity{
+  0%{
+    opacity:0.0;
+  }
+  20%{
+    opacity:0.3;
+  }
+  40%{
+    opacity:0.8;
+  }
+  60%{
+    opacity:1.0;
+  }
+  80%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:0.0;
+  }
+}
