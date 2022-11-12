@@ -1,194 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Urbanist:wght@200;500&display=swap');
+@import "compass/css3";
+
+/* Variables */
+#000: black;
+rgb(229,229,229): white;
+$color-3: rgb(168, 50, 121);
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  min-height: 100%;
-}
-
 body {
-  font-family: 'DotGothic16', sans-serif;
-  color: #fff;
-  min-height: 100%;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(29,29,29);
 }
 
-
-.title {
-  font-size: 7vmax;
-  left: 50%;
-  line-height: 1.4;
-  position: absolute;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  white-space: pre-line;
+body p {
+  line-height: 1.75;
 }
 
-.subtitle{
-  font-size: 1.5vmax;
-  left: 50%;
-  line-height: 1.7;
-  position: absolute;
-  top: 80%;
-  transform: translate(-50%, -50%);
-  white-space: pre-line;
-}
-
-.header {
-  position: absolute;
-  top: 2%;
-  right: 1%;
-}
-
-
-.footer-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-  position: absolute;
-  bottom: 2%;
-  right: 1%;
-  font-size: 1vmax;
-}
-
-a:link, a:visited, a:hover, a:active{
-  font-weight: bold;
-  color:#fff;
-  text-decoration:none;
- }
-
-
-.gradient-container {
-  height: 100vh;
-  overflow: hidden;
+.full {
   position: relative;
   width: 100%;
+  min-height: 100vh;
+  background: url("img/background.jpg")
+    center / cover;
+  background-position: 75%;
 }
 
 
-.color1 {
-  background-color: rgba(109, 131, 243,0.3);
-  height: 200vmax;
-  filter: blur(3vmax);
-  left: 45vmax;
+
+.h1 {
+  margin: 0;
   position: absolute;
-  top: -4vmax;
-  width: 64vmax
+  top: calc(50% - 0.5em);
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  font-size: 8vw;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-shadow: 0 0 1em rgba(0,0,0,0.5);
 }
 
-.color2 {
-  background-color: rgba(77, 56, 206,0.7);
-  border-radius: 50%;
-  filter: blur(5vmax);
-  height: 38vmax;
-  left: 84vmax;
+.scrolldown {
+  display: inline-block;
   position: absolute;
-  top: -28vmax;
-  width: 38vmax;
+  align-items: center;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 50px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 1.3vw;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-decoration: none;
 }
-
-.color3 {
-  background-color: rgba(238, 85, 85,0.3);
-  border-radius: 50%;
-  filter: blur(10vmax);
-  left: 45vmax;
-  height: 100vmax;
+.scrolldown::after {
+  content: '';
   position: absolute;
-  top: 19vmax;
-  width: 67vmax;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 30px;
+  background: #fff;
 }
 
-.color4 {
-  background-color: rgba(255, 190, 130,0.2);
-  filter: blur(12vmax);
-  height: 100vmax;
-  left: -13vmax;
+section {
+  padding: 20vw 10vw;
+  text-align: center;
+  min-height: 100vh;
+}
+
+section h2 {
+  font-size: 5vw;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.carrer-area{
+  background-color: rgb(226,226,226);
+}
+
+.even-box{
+  background-color: #fff;
+}
+
+
+
+/* Styling */
+.timeline {
+  list-style: none;
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+}
+
+.timeline::before {
+  background-color: rgb(29,29,29);
+  content: '';
+  margin-left: -1px;
   position: absolute;
-  top: 20vmax;
-  width: 83vmax;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
 }
 
-.color5 {
-  background-color: rgba(204, 252, 255,0.8);
-  border-radius: 50%;
-  filter: blur(3vmax);
-  height: 83vmax;
-  left: -20vmax;
+
+.timeline-event {
+  position: relative;
+}
+
+/*.timeline-event:hover {
+
+  .timeline-event > .timeline-event-icon {
+
+      background-color: rgb(229,229,229);
+    }
+
+    .timeline-event-thumbnail {
+      @include box-shadow(inset 40em 0 0 0 $color-3);
+    }
+  }
+}
+*/
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+  text-align: left;
+}
+
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+
+.timeline-event-copy  h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+
+.timeline-event-icon {
+  background-color: #000;
+  outline: 10px solid rgb(226,226,226);
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
-  top: -30vmax;
-  width: 83vmax;
+  top: 0.8em;
+  left: -0.5em;
+  width: 1em;
+  height: 1em;
 }
 
-.color6 {
-  background-color: rgba(105, 192, 255,1);
-  filter: blur(12vmax);
-  height: 64vmax;
-  left: -16vmax;
-  position: absolute;
-  top: -6vmax;
-  transform: rotate(-8deg);
-  width: 30vmax;
-}
-
-.color7 {
-  background: linear-gradient(to top, rgba(254, 188, 255,0.8) 20%, rgba(254, 202, 255, 0) 100%);
-  top: 8vmax;
-  filter: blur(8vmax);
-  height: 50vmax;
-  left: -12vmax;
-  position: absolute;
-  transform: rotate(-30deg);
-  width: 100vmax;
-}
-
-.color8{
-  height: 100vmax;
-  width: 100vmax;
-  position: absolute;
-
-  animation: color 20s ease infinite;
-
+.timeline-event-thumbnail {
+  color: rgb(226,226,226);
+  font-size: 0.75em;
+  background-color: rgb(29,29,29);
+  display: inline-block;
+  margin-bottom: 0em;
+  padding: 0.25em 1em 0.2em 1em;
 }
 
 
-@keyframes color {
-  0% {
-    background: rgba(254, 189, 255,0.4);
-  }
-  20% {
-    background: rgba(255, 189, 190,0.4);
-  }
-  40% {
-    background: rgba(255, 254, 189,0.4);
-  }
-  60% {
-    background: rgba(190, 255, 189,0.4) ;
-  }
-  80% {
-    background: rgba(189, 255, 254,0.4) ;
-  }
-  100% {
-    background: rgba(254, 189, 255,0.4) ;
-  }
-}
+footer{
+  text-align: right;
+  padding: 30px;
+  background-color: rgb(226,226,226);
 
-@keyframes gradopacity{
-  0%{
-    opacity:0.0;
-  }
-  20%{
-    opacity:0.3;
-  }
-  40%{
-    opacity:0.8;
-  }
-  60%{
-    opacity:1.0;
-  }
-  80%{
-    opacity:0.5;
-  }
-  100%{
-    opacity:0.0;
-  }
+}
+footer a{
+  text-decoration: none;
+  color: rgb(29,29,29);
+}
+footer a:hover{
+  text-decoration: none;
+  color: #fff;
 }
