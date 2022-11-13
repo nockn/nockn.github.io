@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Urbanist:wght@200;500&display=swap');
-@import "compass/css3";
-
-/* Variables */
-#000: black;
-rgb(229,229,229): white;
-$color-3: rgb(168, 50, 121);
 
 * {
   margin: 0;
@@ -12,15 +6,15 @@ $color-3: rgb(168, 50, 121);
 }
 
 body {
-  font-size: 16px;
+  font-size: 1em;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
   font-family: 'Noto Sans JP', sans-serif;
   color: rgb(29,29,29);
 }
 
-body p {
-  line-height: 1.75;
-}
 
+/* TOP */
 .full {
   position: relative;
   width: 100%;
@@ -29,8 +23,6 @@ body p {
     center / cover;
   background-position: 75%;
 }
-
-
 
 .h1 {
   margin: 0;
@@ -75,6 +67,7 @@ body p {
   background: #fff;
 }
 
+/* MAIN */
 section {
   padding: 20vw 10vw;
   text-align: center;
@@ -90,13 +83,6 @@ section h2 {
   background-color: rgb(226,226,226);
 }
 
-.even-box{
-  background-color: #fff;
-}
-
-
-
-/* Styling */
 .timeline {
   list-style: none;
   margin: 4em auto;
@@ -120,20 +106,6 @@ section h2 {
   position: relative;
 }
 
-/*.timeline-event:hover {
-
-  .timeline-event > .timeline-event-icon {
-
-      background-color: rgb(229,229,229);
-    }
-
-    .timeline-event-thumbnail {
-      @include box-shadow(inset 40em 0 0 0 $color-3);
-    }
-  }
-}
-*/
-
 .timeline-event-copy {
   padding: 2em;
   position: relative;
@@ -145,27 +117,17 @@ section h2 {
 
 .timeline-event-copy h3 {
   font-size: 1.75em;
+  margin: 0.5em 0;
 }
-
-.timeline-event-copy  h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
-}
-
-
-.timeline-event-copy p:not(.timeline-event-thumbnail) {
-  padding-bottom: 1.2em;
-}
-
 
 .timeline-event-icon {
-  background-color: #000;
+  background-color: rgb(29,29,29);
   outline: 10px solid rgb(226,226,226);
   display: block;
   margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
-  top: 0.8em;
-  left: -0.5em;
+  top: 0;
+  left: 2em;
   width: 1em;
   height: 1em;
 }
@@ -176,7 +138,17 @@ section h2 {
   background-color: rgb(29,29,29);
   display: inline-block;
   margin-bottom: 0em;
-  padding: 0.25em 1em 0.2em 1em;
+  padding: 0.2em 1em 0.2em 1em;
+}
+
+.portfolio{
+  background-color: #fff;
+}
+
+.portfolio h3{
+  font-size: 3vw;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
 }
 
 
